@@ -1,0 +1,36 @@
+
+<ion-view view-title="Colabore.ufpe">
+
+  <ion-content class="padding">
+
+    <div class="list list-inset">
+      <label class="item item-input">
+        <i class="icon ion-search placeholder-icon"></i>
+        <input type="text" placeholder="Pesquisar">
+        <span class="input-label"></span>
+      </label>
+    </div>
+    <div class="list card" ng-repeat="publicacao in publicacoes">
+
+      <div class="item item-avatar">
+        <img src="{{publicacao.face}}">
+        <h2>{{publicacao.nome}}</h2>
+        <p>{{publicacao.data}}</p>
+      </div>
+      <div class="item item-body">
+        <img class="full-image" src="{{publicacao.foto}}">
+        <p>
+          {{publicacao.descricao}}
+          <br><i class="icon ion-location"></i>{{publicacao.local}}
+        </p>
+        <p>
+        <div class= "button-bar bar-positive">
+          <a href="#/tab/fiscalizar" class="subdued"><a id="contador-de-apoio" data-valor="1" class="button">1 Apoiador</a></a>
+          <a href="#/tab/fiscalizar/{{publicacao.id}}" class="subdued"><a class="button">5 Comentários </a></a>
+          <a href="#/tab/fiscalizar" class="subdued"><a class="button">Divulgar</a></a>
+        </p>
+      </div>
+
+    </div>
+  </ion-content>
+</ion-view>
